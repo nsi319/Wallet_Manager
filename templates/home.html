@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link rel="stylesheet"  type="text/css" href="{{ url_for('static',filename='home.css') }}">
+<head>
+	<title>
+		Home
+	</title>
+</head>
+<body>
+ <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">
+          <a class="navbar-brand mr-4" href="/">WALLET MANAGER</a>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" href="{{ url_for('add') }}">Add</a>
+              <a class="nav-item nav-link" href="{{ url_for('view') }}">View</a>
+              <a class="nav-item nav-link" href="{{ url_for('delete') }}">Delete</a>
+              <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+            </div>
+        </div>
+    </div>
+</nav>
+</header>
+<br><br><br>
+   {% with messages = get_flashed_messages() %}
+	{% if messages %}
+	{% for message in messages %}
+	<p><b>{{message}}</b></p>
+	{% endfor %}
+	{% endif %}
+	{% endwith %}
+</body>
+</html>

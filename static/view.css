@@ -1,0 +1,27 @@
+.view_det{
+    border:1px solid black;
+    padding: 10px;
+    background-color: SteelBlue;
+    margin: auto;
+}
+button {
+    align-self: center;
+    display: inline-block;
+}
+
+h1{
+    font-size: 40px;
+    font-style: bold;
+    text-align: center;
+    display: block;
+}
+h2 {
+    font-size: 30px;
+    font-style: bold;
+    text-align: center;
+    display: block;
+}
+p {
+    font-size: 20px;
+    display: block;
+}

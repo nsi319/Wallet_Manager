@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<style>
+	.view_det{
+    border:1px solid black;
+    padding: 10px;
+    background-color: SteelBlue;
+    margin: auto;
+}
+button {
+    align-self: center;
+    display: inline-block;
+}
+
+h1{
+    font-size: 40px;
+    font-style: bold;
+    text-align: center;
+    display: block;
+}
+h2 {
+    font-size: 30px;
+    font-style: bold;
+    text-align: center;
+    display: block;
+}
+p {
+    font-size: 20px;
+    display: block;
+}
+</style>
+<head>
+	<h1 >WALLET MANAGER</h1>
+	<title>
+		VIEW
+	</title>
+	<h2>VIEW BILLS</h2>
+</head>
+<body>
+	<div class = "view_det">
+	<ul>
+	{% with messages = get_flashed_messages() %}
+	{% if messages %}
+	{% for message in messages %}
+	<p><b><li>{{message}}</li></b></p>
+	<br>
+	{% endfor %}
+	{% endif %}
+	{% endwith %}
+    </ul>
+</div>
+</body>
+</html>

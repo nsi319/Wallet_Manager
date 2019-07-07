@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet"  type="text/css" href="{{ url_for('static',filename='delete.css') }}">
+<head>
+	<h1>WALLET MANAGER</h1>
+	<title>
+		Delete
+	</title>
+	<h2>DELETE EXPENSE</h2>
+</head>
+<body>
+	<form method="POST" action="" id = "delete">
+	<div class = "form_del">
+			<label>Title</label>
+			<input type="text" name="title" required>
+			<br>
+  {% if error %}
+  <p><b> {{ error }}</b></p> 
+  {% endif %}
+  <button type="submit" form="delete" value="Submit">Delete</button>
+  </div> 
+  </form>
+
+</body>
+</html>
